@@ -2,11 +2,20 @@
 
 
 {% block content %}
+ {% for project in projects.all %}
+ <div class="row">
+   <div class="col-2">
+     <img src="{{ project.image.url }}" class="img-fluid" />
+     </div>
+     <div class="col-6">
+       <h1>{{ project.title }}</h1>
+       <p> {{ project.summary }} </p>
+       </div>
+       <div class="col-2">
+         <a href="javascript:{document.getElementById('upvote').submit()}"><button class="btn btn-primary btn-sm btn-block"><span class="oi oi-thumb-up"></span>Upvote  {{ project.votes_total }}</button></a></div>
+         </div>
 
-
-
-home page
 
 <br/>
-
+{% endfor %}
 {% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="row">
+  <div class="col-2">
+    <img  height="100" width="100" src="{{ project.icon.url }}" class="img-fluid" />
+    </div>
+    <div class="col-10">
+      <a href="{{ project.url }}"><h1>{{ project.title }}</h1></a>
+      </div>
+
+      <div class="row">
+        <div class="col-10">
+          <img src="{{ project.image.url }}" class="img-fluid" />
+          </div>
+          <div class="col-1">
+<a href="javascript:{document.getElementById('upvote').submit()}"><button class="btn btn-primary btn-sm btn-block"><span class="oi oi-thumb-up"></span>Upvote  {{ project.votes_total }}</button></a></div>
+<div class="col-1"><a href=""><button class="btn btn-primary btn-sm btn-block"><span class="oi oi-bell"></span>Enquire now</button></a></div>
+            <div class="row">
+              <div class="col-12">
+              <h6> Date Published: {{ project.pub_date_pretty }}</h6>
+                </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                    <p>{{ project.top_para }}</p>
+                      </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                          <p>{{ project.mid_para }}</p>
+                            </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-12">
+                                <p>{{ project.bottom_para }}</p>
+                                  </div>
+                                    </div>
+                                    <form method="POST" id="upvote" action="{% url 'upvote' project.id %}">
+                                    {% csrf_token %}
+                                    <input type="hidden" />
+                                    </form>
+
+<div class="container">
+  <div class="row">
+   <div class="col-10">
+   </div>
+  <div class="col-2">
+   <button class="btn btn-primary btn-sm btn-block "><span class="oi oi-thumb-up"></span>Tap to Enquiry</button>
+    </div>
+  </div></div>
+
+
+
+
+{% endblock %}
