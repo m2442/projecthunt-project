@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="row">
+<div class="row pt-3">
   <div class="col-2">
-    <img  height="100" width="100" src="{{ project.icon.url }}" class="img-fluid" />
+    <img  height="80" width="180" src="{{ project.icon.url }}" class="img-fluid" />
     </div>
     <div class="col-10">
-      <a href="{{ project.url }}"><h1>{{ project.title }}</h1></a>
+      <a id = "GFG" style="color:#000000;"><h1><p > <span style="cursor:default">{{ project.title }} </span></p></h1></a>
       </div>
 
       <div class="row">
@@ -23,17 +23,18 @@
                   </div>
                   <div class="row">
                     <div class="col-12">
-                    <p>{{ project.top_para }}</p>
+                      <p > <span style="cursor:default">{{ project.top_para }} </span></p>
+
                       </div>
                         </div>
                         <div class="row">
                           <div class="col-12">
-                          <p>{{ project.mid_para }}</p>
+                          <p><span style="cursor:default">{{ project.mid_para }} </span></p>
                             </div>
                               </div>
                               <div class="row">
                                 <div class="col-12">
-                                <p>{{ project.bottom_para }}</p>
+                                <p><span style="cursor:default">{{ project.bottom_para }} </span></p>
                                   </div>
                                     </div>
                                     <form method="POST" id="upvote" action="{% url 'upvote' project.id %}">
