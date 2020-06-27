@@ -12,22 +12,20 @@
 
 <form method="POST" actions="{ % url 'signup' }">
   {% csrf_token %}
-  Full name: <br/><input type="text" name="fullname"/>
+  Full name: <br/><input size=40 type="text" name="fullname" required/>
   <br/>
-  Email id: <br/><input type="email" name="fullname"/>
+  Email id: <br/><input size=40 type="email" name="fullname" required/>
   <br/>
-  Institute: <br/><input type="text" name="institute"/>
+  Institute: <br/><input size=40 type="text" name="institute" required/>
   <br/>
-  Username: <br/><input type="text" name="username"/>
+  Username: <br/><input placeholder="Username" type="text" name="username" required/>
   <br/>
-  Password: <br/> <input type="password" name="password1"/>
+  Password: <br/> <input placeholder="Password" type="password" name="password1" required/>
   <br/>
-  Confirm Password: <br/> <input type="password" name="password2"/>
+  Confirm Password: <br/> <input placeholder="Confirm password" type="password" name="password2" required/>
 <br/><br/>
   <input class= "btn btn-primary" type="submit" value="Sign Uppp!"/>
 
 </form>
-
-
 
 {% endblock %}

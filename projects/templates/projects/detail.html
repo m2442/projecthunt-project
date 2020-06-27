@@ -1,21 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<div class="container">
 <div class="row pt-3">
-  <div class="col-2">
-    <img  height="80" width="180" src="{{ project.icon.url }}" class="img-fluid" />
-    </div>
-    <div class="col-10">
-      <a id = "GFG" style="color:#000000;"><h1><p > <span style="cursor:default">{{ project.title }} </span></p></h1></a>
+  <div class="col-12">
+    <h2><span class="oi oi-bookmark"></span>  {{ project.title }}</div>
+    <!-- <img src="{{ project.icon.url }}" height=35 width=35 class="d-inline-block alighn-top" /> -->
+      <!-- <a id = "GFG" style="color:#000000;"><h1><p > <span style="cursor:default"> </span></p></h1></a> -->
       </div>
-
+<hr>
       <div class="row">
         <div class="col-10">
           <img src="{{ project.image.url }}" class="img-fluid" />
           </div>
-          <div class="col-1">
-<a href="javascript:{document.getElementById('upvote').submit()}"><button class="btn btn-primary btn-sm btn-block"><span class="oi oi-thumb-up"></span>Upvote  {{ project.votes_total }}</button></a></div>
-<div class="col-1"><a href=""><button class="btn btn-primary btn-sm btn-block"><span class="oi oi-bell"></span>Enquire now</button></a></div>
+          <div class="col-2">
+            <div class="btn-group btn-group-vertical">
+  <a href="javascript:{document.getElementById('upvote').submit()}"><button class="btn btn-info"><span class="oi oi-thumb-up"></span>Upvote  {{ project.votes_total }}</button></a>
+  <a href="javascript:{document.getElementById('enquiry').submit()}"><button class="btn btn-info"><span class="oi oi-bell"></span> &nbsp;Enquire&nbsp;&nbsp; </button></a>
+</div></div>
+<!-- <a href="javascript:{document.getElementById('upvote').submit()}"><button class="btn btn-primary btn-sm btn-block"><span class="oi oi-thumb-up"></span>Upvote  {{ project.votes_total }}</button></a></div>
+<div class="col-1"><a href="https://forms.gle/HKakwqmErr8F4msu7"><button class="btn btn-primary btn-sm btn-block"><span class="oi oi-bell"></span>Enquire now</button></a></div> -->
             <div class="row">
               <div class="col-12">
               <h6> Date Published: {{ project.pub_date_pretty }}</h6>
@@ -41,17 +44,18 @@
                                     {% csrf_token %}
                                     <input type="hidden" />
                                     </form>
-
-<div class="container">
-  <div class="row">
-   <div class="col-10">
-   </div>
-  <div class="col-2">
-   <button class="btn btn-primary btn-sm btn-block "><span class="oi oi-thumb-up"></span>Tap to Enquiry</button>
-    </div>
-  </div></div>
+                                    <form method="POST" id="enquiry" action="{% url 'enquiry' project.id %}">
+                                    {% csrf_token %}
+                                    <input type="hidden" />
+                                    </form>
 
 
+<div class="container" style="text-align:center">
+<a href="javascript:{document.getElementById('enquiry').submit()}"><button class="btn btn-info"><span class="oi oi-bell"></span> Enquire / Order Update</button></a>
 
+</div><br/>
+
+
+</div>
 
 {% endblock %}

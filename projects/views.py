@@ -25,3 +25,9 @@ def upvote1(request, project_id):
         project.votes_total += 1
         project.save()
         return redirect('home')
+
+@login_required(login_url="/accounts/signup")
+def enquiry(request, project_id):
+    if request.method=='POST':
+        project = get_object_or_404(Project, pk=project_id)
+        return render(request, 'projects/enquiry.html')
