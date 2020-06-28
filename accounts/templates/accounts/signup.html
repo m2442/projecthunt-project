@@ -8,7 +8,7 @@
 <br/>
 {% endif %}
 
-<h1>Sign up!</h1>
+<h1>Create your account</h1>
 
 <form method="POST" actions="{ % url 'signup' }">
   {% csrf_token %}
@@ -18,13 +18,13 @@
   <br/>
   Institute: <br/><input size=40 type="text" name="institute" required/>
   <br/>
-  Username: <br/><input placeholder="Username" type="text" name="username" required/>
+  Username: <br/><input type="text" name="username" required/>
   <br/>
-  Password: <br/> <input placeholder="Password" type="password" name="password1" required/>
+  Password: <br/> <input  type="password" name="password1" required/>
   <br/>
-  Confirm Password: <br/> <input placeholder="Confirm password" type="password" name="password2" required/>
+  Confirm Password: <br/> <input type="password" name="password2" required/>
 <br/><br/>
-  <input class= "btn btn-primary" type="submit" value="Sign Uppp!"/>
+  <input class= "btn btn-info" type="submit" value="Sign Uppp!"/>
 
 </form>
 

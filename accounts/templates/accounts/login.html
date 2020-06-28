@@ -12,10 +12,10 @@
 <center>
 <form method="POST" actions="{ % url 'login' }">
   {% csrf_token %}
-  Username: <br/><input type="text" placeholder="username" name="username" required/><br/>
+<b>  Username: </b><br/><input type="text" placeholder="username" name="username" required/><br/>
   Password: <br/> <input type="password" placeholder="Password" name="password" required/><br/>
   <br/>
-  <input class= "btn btn-primary" type="submit" value="Login"/>
+  <input class= "btn btn-info" type="submit" value="Login"/>
 
 </form></center>
 
