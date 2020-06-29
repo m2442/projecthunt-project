@@ -1,23 +1,21 @@
-{% extends 'base.html' %}
+{% extends 'fixfoot.html' %}
 
 
 {% block content %}
-{% if error %}
-{{ error }}
-<br/>
-<br/>
-{% endif %}
-<br>
-<h1>Login</h1><br><div class="container"><br><br>
+
+<h1>Login</h1><hr><div class="container">
+{% if error %}{{ error }}{% endif %}
+
+
 <center>
 <form method="POST" actions="{ % url 'login' }">
   {% csrf_token %}
 <b>  Username: </b><br/><input type="text" placeholder="username" name="username" required/><br/>
-  Password: <br/> <input type="password" placeholder="Password" name="password" required/><br/>
+  <b>Password: </b><br/> <input type="password" placeholder="Password" name="password" required/><br/>
   <br/>
   <input class= "btn btn-info" type="submit" value="Login"/>
 
-</form></center></div><br><br><br><br><br><br><br>
+</form></center></div><br><br><br><br><br><br>
 
 
 
