@@ -2,12 +2,12 @@
 
 
 {% block content %}
+<div class="container">
 {% if error %}
 {{ error }}
 <br/>
-<br/>
 {% endif %}
-
+</div>
 <h1>Create your account</h1>
 
 <form method="POST" actions="{ % url 'signup' }">
@@ -27,5 +27,5 @@
   <input class= "btn btn-info" type="submit" value="Sign Uppp!"/>
 
 </form>
-
+<br/>
 {% endblock %}
