@@ -6,8 +6,12 @@
 <h1>Login</h1><hr><div class="container">
 {% if error %}{{ error }}{% endif %}
 
+<div class="container">
+  <div class="row">
+    <div class="col-12">
 
-<center>
+
+    <center>
 <form method="POST" actions="{ % url 'login' }">
   {% csrf_token %}
 <b>  Username: </b><br/><input type="text" placeholder="username" name="username" required/><br/>
@@ -15,7 +19,10 @@
   <br/>
   <input class= "btn btn-info" type="submit" value="Login"/>
 
-</form></center></div><br><br><br><br><br><br>
+</form></center>      </div></div>
+<div class="row">
+  <div class="col-8"><center>
+  <a href="{% url 'signup' %}">Create an account</a></center></div></div></div><br><br><br><br><br><br>
 
 
 

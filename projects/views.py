@@ -10,7 +10,7 @@ def detail(request, project_id):
     project = get_object_or_404(Project, pk=project_id)
     return render(request, 'projects/detail.html', {'project':project})
 
-@login_required(login_url="/accounts/signup")
+@login_required(login_url="/accounts/login")
 def upvote(request, project_id):
     if request.method=='POST':
         project = get_object_or_404(Project, pk=project_id)
@@ -18,13 +18,13 @@ def upvote(request, project_id):
         project.save()
         return redirect('/projects/' + str(project.id))
 
-@login_required(login_url="/accounts/signup")
+@login_required(login_url="/accounts/login")
 def upvote1(request, project_id):
     if request.method=='POST':
         project = get_object_or_404(Project, pk=project_id)
         project.votes_total += 1
         project.save()
-        return redirect('home')
+        pass
 
 @login_required(login_url="/accounts/signup")
 def enquiry(request, project_id):
