@@ -15,7 +15,7 @@
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <link href="{% static 'open-iconic/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet">
-
+<script src="https://kit.fontawesome.com/6c23e6ecce.js" crossorigin="anonymous"></script>
 <style>
        #GFG {
            text-decoration: none;
@@ -63,6 +63,48 @@
 {% endblock %}
 </div>
 
+
+
+<!-- Footer -->
+<footer class="page-footer font-small blue-grey lighten-7">
+  <div style="background-color:#F0F0F7; cursor:default">
+    <div class="container">
+      <div class="row py-3 d-flex align-items-center">
+        <div class="col-md-3 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0">Connect with me on social networks!</h6>
+        </div>
+        <div class="col-md-6 col-lg-7 text-center text-md-mid"><center>
+          <a class="li-ic" href="https://www.linkedin.com" target="_blank" style="color:#2867B2;">
+            <i class="fab fa-linkedin fa-lg"></i></a>
+            <a class="li-ic" href="https://www.facebook.com" target="_blank" style="color:#3b5998;"><i class="fab fa-facebook fa-lg"></i>
+          </a></center>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center text-md-left mt-2" style="cursor:default">
+    <div class="row mt-0 dark-grey-text">
+      <div class="col-md-4 col-lg-4 col-xl-6 mb-4">
+        <h6 class="text-uppercase font-weight-bold">Product Hunt</h6>
+
+        <p>Here you put a small description about the company or the services just an
+          intro.Just a maximum 2 lines intro.Here you put a small description about the
+          Here you put a description..Here you put a small description about the
+        </p>
+      </div>
+      <div class="col-md-3 col-lg-3 col-xl-3 ml-auto mb-md-0 mb-4">
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <h6>
+            <a id = "GFG" class="li-ic" href="{% url 'about' %}" style="color:#000000;"><i class="fas fa-paperclip mr-2"></i> About </h6></a>
+      <h6>
+          <i class="fas fa-envelope mr-2"></i> info@example.com</h6>
+      <h6>
+          <i class="fas fa-phone mr-2"></i>+ 91 9561111130</h6>
+        <h6>
+          <i class="fas fa-phone mr-2"></i>+ 01 234 567 89</h6>
+      </div>
+    </div>
+</footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
